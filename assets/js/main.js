@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       description: 'Nuestros viajes juntos no solo han sido aventuras, sino también pruebas de nuestra fuerza y amor. Cada desafío enfrentado nos ha hecho más fuertes y ha reafirmado nuestro compromiso de salir adelante juntos.'
     },
     {
-      src: 'assets/img/4.JPG',
+      src: 'assets/img/4.jpg',
       title: 'Motivación y Crecimiento',
       description: 'Cada experiencia compartida ha sido una fuente de inspiración y motivación. Juntos, hemos aprendido a superar obstáculos y a enfrentar el futuro con optimismo y amor, siempre mirando hacia adelante con esperanza.'
     }
