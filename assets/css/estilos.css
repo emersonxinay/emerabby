@@ -1,0 +1,301 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #c2185b;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+footer{
+  background-color: #c2185b;
+  padding: 2em;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos principales */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #c2185b;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.card-header {
+  background-color: #f8bbd0;
+  padding: 15px;
+}
+
+.card-header h1 {
+  margin: 0;
+  color: #c2185b;
+}
+
+.card-body {
+  padding: 20px;
+  color: #555;
+}
+
+.card-body p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.card-footer {
+  background-color: #f8bbd0;
+  padding: 10px;
+}
+
+.card-footer p {
+  margin: 0;
+  color: #c2185b;
+  font-style: italic;
+}
+
+/* Estilos de la galería */
+section#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+article {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+article img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos del lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  flex-direction: column;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close, .prev, .next {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.close {
+  top: 20px;
+  right: 200px;
+}
+
+.prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close:hover, .prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #c2185b;
+}
+
+#caption {
+  color: #f7f2f7;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  background-color: #ed10d06a;
+  border-radius: 2em;
+  margin-right: 2em;  
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .card-container {
+    margin-top: 10px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .lightbox-content {
+    max-width: 100%;
+    max-height: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .close, .prev, .next {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 50px;
+  }
+
+  #caption {
+    font-size: 1.2em;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header h1, .card-body p, .card-footer p {
+    font-size: 14px;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .lightbox-content {
+    padding: 10px;
+    max-width: 100%;
+    max-height: 90%;
+    
+  }
+
+  .close, .prev, .next {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .close {
+    top: 5px;
+    right: 5px;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 30px;
+  }
+
+  #caption {
+    font-size: 1em;
+    padding: 0.5em;
+  }
+}
